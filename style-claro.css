@@ -1,0 +1,368 @@
+/* =========================================
+   1. Configurações Gerais e Tipografia
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #f5f5f5;
+    /* Fundo base claro */
+    color: #333333;
+    /* Texto escuro para boa legibilidade */
+    line-height: 1.8;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* =========================================
+   2. Header e Navegação
+   ========================================= */
+header {
+    background: linear-gradient(180deg, #ffffff 0%, #f5f5f5 100%);
+    padding-bottom: 80px;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.btn-tema {
+    background-color: transparent;
+    color: #d4a000;
+    border: 1px solid #d4a000;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.btn-tema:hover {
+    background-color: #d4a000;
+    color: #ffffff;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    padding: 0;
+    background-color: transparent;
+    color: #555555;
+    font-weight: 600;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #d4a000;
+}
+
+/* =========================================
+   3. Hero Section
+   ========================================= */
+.hero-content {
+    text-align: center;
+    margin-top: 60px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #d4a000;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #555555;
+    font-weight: 400;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: #ffcc00;
+    color: #000000;
+    /* Texto preto para garantir acessibilidade visual */
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(212, 160, 0, 0.15);
+}
+
+.btn-cta:hover {
+    background-color: #ffd633;
+    box-shadow: 0 15px 25px rgba(212, 160, 0, 0.25);
+    transform: scale(1.02);
+}
+
+/* =========================================
+   4. Estrutura das Seções
+   ========================================= */
+section {
+    padding: 80px 0;
+}
+
+/* Alternância de cores para ritmo visual no tema claro */
+#servicos,
+#portfolio {
+    background-color: #ffffff;
+}
+
+#diferenciais,
+#localizacao {
+    background-color: #f5f5f5;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: #d4a000;
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* =========================================
+   5. Serviços
+   ========================================= */
+ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+li {
+    margin-bottom: 15px;
+    color: #444444;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+#servicos li::before {
+    content: "•";
+    color: #d4a000;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* =========================================
+   6. Diferenciais (Cards)
+   ========================================= */
+.grid-diferenciais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-diferencial {
+    background-color: #ffffff;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #dddddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.03);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-diferencial:hover {
+    transform: translateY(-5px);
+    border-color: #d4a000;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card-diferencial .icone {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card-diferencial h3 {
+    color: #222222;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.card-diferencial p {
+    color: #666666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* =========================================
+   7. Portfólio (Galeria)
+   ========================================= */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.trabalho {
+    position: relative;
+    background-color: #ffffff;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.trabalho:hover {
+    border-color: #d4a000;
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.trabalho img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.legenda {
+    padding: 25px;
+}
+
+.legenda h3 {
+    color: #d4a000;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
+
+.legenda p {
+    color: #555555;
+    font-size: 0.95rem;
+}
+
+/* =========================================
+   8. Mapa de Localização
+   ========================================= */
+.mapa {
+    margin-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #dddddd;
+    background-color: #ffffff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
+}
+
+/* =========================================
+   9. CTA Final
+   ========================================= */
+#cta-final {
+    background: linear-gradient(180deg, #f5f5f5 0%, #ffffff 100%);
+    text-align: center;
+    padding: 100px 0;
+    border-top: 1px solid #dddddd;
+}
+
+.cta-container h2 {
+    margin-bottom: 15px;
+}
+
+.cta-container p {
+    color: #555555;
+    font-size: 1.1rem;
+    margin-bottom: 40px;
+}
+
+.btn-whats-large {
+    display: inline-block;
+    padding: 18px 50px;
+    background-color: #25d366;
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 1.2rem;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(37, 211, 102, 0.2);
+}
+
+.btn-whats-large:hover {
+    background-color: #1ebe57;
+    box-shadow: 0 15px 30px rgba(37, 211, 102, 0.4);
+    transform: scale(1.05);
+}
+
+/* =========================================
+   10. Rodapé e Botão Flutuante
+   ========================================= */
+footer {
+    background-color: #ffffff;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #dddddd;
+}
+
+footer p {
+    color: #666666;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+.btn-whats {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.btn-whats:hover {
+    transform: scale(1.05);
+}

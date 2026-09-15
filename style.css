@@ -1,0 +1,308 @@
+/* 1. Configurações Gerais e Tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+    /* Adiciona rolagem suave a toda a página */
+}
+
+body {
+    background-color: #121212;
+    color: #e0e0e0;
+    line-height: 1.8;
+}
+
+/* Limitador de largura para centralizar o conteúdo */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 2. Header e Navegação */
+header {
+    background: linear-gradient(180deg, #1a1a1a 0%, #121212 100%);
+    padding-bottom: 80px;
+}
+
+.header-top {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.btn-tema {
+    background-color: transparent;
+    color: #ffcc00;
+    border: 1px solid #ffcc00;
+    padding: 8px 16px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.btn-tema:hover {
+    background-color: #ffcc00;
+    color: #121212;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    padding: 0;
+    background-color: transparent;
+    color: #bdbdbd;
+    font-weight: 500;
+    border-radius: 0;
+    box-shadow: none;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffcc00;
+}
+
+/* 3. Hero Section (Apresentação inicial) */
+.hero-content {
+    text-align: center;
+    margin-top: 60px;
+}
+
+header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #ffcc00;
+    letter-spacing: -1px;
+    margin-bottom: 15px;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #a0a0a0;
+    font-weight: 300;
+    max-width: 600px;
+    margin: 0 auto 40px;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 16px 40px;
+    background-color: #ffcc00;
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 20px rgba(255, 204, 0, 0.15);
+}
+
+.btn-cta:hover {
+    background-color: #ffd633;
+    box-shadow: 0 15px 25px rgba(255, 204, 0, 0.25);
+    transform: scale(1.02);
+}
+
+/* 4. Estrutura das Seções */
+section {
+    padding: 80px 0;
+}
+
+#servicos,
+#portfolio {
+    background-color: #1c1c1c;
+}
+
+#diferenciais,
+#localizacao {
+    background-color: #121212;
+}
+
+/* Títulos centralizados */
+h2 {
+    font-size: 2.2rem;
+    color: #ffcc00;
+    margin-bottom: 50px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* 5. Serviços (Lista) */
+ul {
+    list-style: none;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+li {
+    margin-bottom: 15px;
+    color: #bdbdbd;
+    display: flex;
+    align-items: center;
+    font-size: 1.05rem;
+}
+
+#servicos li::before {
+    content: "•";
+    color: #ffcc00;
+    font-weight: bold;
+    margin-right: 10px;
+    font-size: 1.5rem;
+}
+
+/* 6. Diferenciais (Cards em Grid) */
+.grid-diferenciais {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.card-diferencial {
+    background-color: #1a1a1a;
+    padding: 40px 30px;
+    border-radius: 15px;
+    text-align: center;
+    border: 1px solid #2a2a2a;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card-diferencial:hover {
+    transform: translateY(-5px);
+    border-color: #ffcc00;
+}
+
+.card-diferencial .icone {
+    font-size: 2.8rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.card-diferencial h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.card-diferencial p {
+    color: #a0a0a0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+/* 7. Portfólio (Galeria de Trabalhos) */
+.galeria {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.trabalho {
+    position: relative;
+    background-color: #121212;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.trabalho:hover {
+    border-color: #ffcc00;
+    transform: translateY(-5px);
+}
+
+.trabalho img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+.legenda {
+    padding: 25px;
+}
+
+.legenda h3 {
+    color: #ffcc00;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+    text-align: left;
+    /* Mantém alinhado a esquerda para leitura em cards */
+}
+
+.legenda p {
+    color: #bdbdbd;
+    font-size: 0.95rem;
+}
+
+/* 8. Mapa de Localização */
+.mapa {
+    margin-top: 30px;
+    border-radius: 15px;
+    overflow: hidden;
+    border: 1px solid #2a2a2a;
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 350px;
+    border: 0;
+    display: block;
+}
+
+/* 9. Rodapé */
+footer {
+    background-color: #1c1c1c;
+    padding: 60px 0;
+    text-align: center;
+    border-top: 1px solid #2a2a2a;
+}
+
+footer p {
+    color: #888;
+    font-size: 0.95rem;
+    margin-bottom: 10px;
+}
+
+/* 10. Botão Flutuante do WhatsApp */
+.btn-whats {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: white;
+    text-decoration: none;
+    padding: 14px 22px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.btn-whats:hover {
+    transform: scale(1.05);
+}
